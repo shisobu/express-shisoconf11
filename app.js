@@ -6,12 +6,14 @@
 var express = require('express');
 
 var app = module.exports = express.createServer();
+app.register('.haml', require('hamljs'));
 
 // Configuration
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
+  app.set('view engine', 'haml');
+  app.set('view options', { layout: false }); 
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
