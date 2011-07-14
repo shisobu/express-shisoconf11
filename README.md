@@ -30,7 +30,7 @@ $ gem install foreman
 $ foreman start
 ```
 
-After that, access ://localhost:3000 to check your app.
+After that, access ://localhost:5000 to check your app.
 
 #### Staging
 ```
